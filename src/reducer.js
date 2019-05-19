@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import comments from './comments.js';
 import users from './users.js';
-import commentsListButton from './commentsListButton';
+import commentsListButtons from './commentsListButtons';
 
 const reducer = combineReducers({
   comments,
   users,
-  commentsListButton
+  commentsListButtons
 });
 
 export default reducer;

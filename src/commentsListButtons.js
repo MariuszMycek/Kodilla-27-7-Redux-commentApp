@@ -1,18 +1,18 @@
 import { COMMENT_IS_EDITED, COMMENT_IS_NOT_EDITED } from './actions';
 
-export default function commentsListButton(
-  state = { buttonDisabled: false },
+export default function commentsListButtons(
+  state = { buttonsDisabled: false },
   action
 ) {
   switch (action.type) {
     case COMMENT_IS_EDITED:
       return Object.assign({}, state, {
-        buttonDisabled: true
+        buttonsDisabled: true
       });
 
     case COMMENT_IS_NOT_EDITED:
       return Object.assign({}, state, {
-        buttonDisabled: false
+        buttonsDisabled: false
       });
 
     default:

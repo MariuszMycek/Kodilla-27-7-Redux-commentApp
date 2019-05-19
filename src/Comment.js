@@ -54,22 +54,22 @@ class Comment extends Component {
       thumbUpComment,
       thumbDownComment,
       removeComment,
-      disabledButtons
+      buttonsDisabled
     } = this.props;
     return (
       <li className='Comment'>
         <p className='CommentText'>{text} </p>
         <span>votes: {votes}</span>
-        <button onClick={() => thumbUpComment(id)} disabled={disabledButtons}>
+        <button onClick={() => thumbUpComment(id)} disabled={buttonsDisabled}>
           Thumb up
         </button>
-        <button onClick={() => thumbDownComment(id)} disabled={disabledButtons}>
+        <button onClick={() => thumbDownComment(id)} disabled={buttonsDisabled}>
           Thumb down
         </button>
-        <button onClick={() => removeComment(id)} disabled={disabledButtons}>
+        <button onClick={() => removeComment(id)} disabled={buttonsDisabled}>
           Remove comment
         </button>
-        <button onClick={this.editCommentHandler} disabled={disabledButtons}>
+        <button onClick={this.editCommentHandler} disabled={buttonsDisabled}>
           Edit comment
         </button>
       </li>

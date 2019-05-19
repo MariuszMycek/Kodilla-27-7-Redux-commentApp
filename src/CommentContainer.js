@@ -9,6 +9,10 @@ import {
   commentIsNotEdited
 } from './actions';
 
+const mapStateToProps = state => ({
+  buttonsDisabled: state.commentsListButtons.buttonsDisabled
+});
+
 const mapDispatchToProps = dispatch => {
   return {
     thumbUpComment: id => dispatch(thumbUpComment(id)),
@@ -21,6 +25,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Comment);

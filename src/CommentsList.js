@@ -6,16 +6,15 @@ const CommentsList = ({
   comments,
   addComment,
   commentIsEdited,
-  buttonDisabled
+  buttonsDisabled
 }) => (
   <div className='CommentListWrapper'>
     <button
       onClick={() => {
         addComment('');
         commentIsEdited();
-        console.log(buttonDisabled);
       }}
-      disabled={buttonDisabled}
+      disabled={buttonsDisabled}
     >
       Add Comment
     </button>

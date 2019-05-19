@@ -3,9 +3,7 @@ import {
   EDIT_COMMENT,
   REMOVE_COMMENT,
   THUMB_UP_COMMENT,
-  THUMB_DOWN_COMMENT,
-  COMMENT_IS_EDITED,
-  COMMENT_IS_NOT_EDITED
+  THUMB_DOWN_COMMENT
 } from './actions';
 
 export default function comments(state = [], action) {
@@ -15,8 +13,7 @@ export default function comments(state = [], action) {
         {
           id: action.id,
           text: action.text,
-          votes: 0,
-          disabledButtons: false
+          votes: 0
         },
         ...state
       ];
@@ -46,18 +43,6 @@ export default function comments(state = [], action) {
         if (comment.id === action.id) {
           comment.votes--;
         }
-        return comment;
-      });
-
-    case COMMENT_IS_EDITED:
-      return state.map(comment => {
-        comment.disabledButtons = true;
-        return comment;
-      });
-
-    case COMMENT_IS_NOT_EDITED:
-      return state.map(comment => {
-        comment.disabledButtons = false;
         return comment;
       });
 

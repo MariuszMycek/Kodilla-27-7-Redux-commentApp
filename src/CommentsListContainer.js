@@ -4,7 +4,7 @@ import { addComment, commentIsEdited } from './actions';
 
 const mapStateToProps = state => ({
   comments: state.comments,
-  buttonDisabled: state.commentsListButton.buttonDisabled
+  buttonsDisabled: state.commentsListButtons.buttonsDisabled
 });
 
 const mapDispatchToProps = dispatch => ({
